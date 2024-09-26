@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Care Services</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f0f4c3, #b2dfdb);
+        color: #333;
+        text-align: center;
+        overflow-x: hidden;
+      }
+      header,
+      footer {
+        padding: 50px 0;
+        background: rgba(0, 150, 136, 0.8); /* Teal color */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s;
+      }
+      footer {
+        top: auto;
+        bottom: 0;
+      }
+      .opaque {
+        background: rgba(0, 150, 136, 1) !important; /* Teal color */
+      }
+      header h1 {
+        font-size: 3em;
+        margin: 0;
+        animation: fadeInDown 2s;
+        color: #ffffff; /* White color */
+      }
+      section {
+        padding: 50px 20px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        display: inline-block;
+        width: 300px;
+        transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: fadeInUp 1s ease-in-out, gradientAnimation 5s infinite;
+      }
+      .card:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .card h2 {
+        font-size: 2em;
+        margin: 0 0 10px;
+        color: #00796b; /* Dark Teal color */
+      }
+      .card p {
+        font-size: 1.2em;
+        color: #333; /* Dark Gray color */
+      }
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes gradientAnimation {
+        0% {
+          background: rgba(255, 255, 255, 0.9);
+        }
+        50% {
+          background: rgba(224, 242, 241, 0.9); /* Light Teal color */
+        }
+        100% {
+          background: rgba(255, 255, 255, 0.9);
+        }
+      }
+      footer p {
+        margin: 0;
+        font-size: 1em;
+        color: #ffffff; /* White color */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Pet Care Services</h1>
+    </header>
+    <section>
+      <div class="card">
+        <h2>Easy Booking</h2>
+        <p>Submit a request to leave your pet with us easily and quickly.</p>
+      </div>
+      <div class="card">
+        <h2>Professional Care</h2>
+        <p>Your pet will be taken care of by our professional staff.</p>
+      </div>
+      <div class="card">
+        <h2>Safe Environment</h2>
+        <p>We provide a safe and comfortable environment for your pet.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Why Choose Us?</h2>
+      <div class="card">
+        <h2>Experienced Staff</h2>
+        <p>
+          Our team has years of experience in pet care, ensuring your pet is in
+          good hands.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Affordable Prices</h2>
+        <p>
+          We offer competitive pricing without compromising on the quality of
+          care.
+        </p>
+      </div>
+      <div class="card">
+        <h2>24/7 Support</h2>
+        <p>
+          We are available around the clock to answer any questions or concerns
+          you may have.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2023 Pet Care Services. All rights reserved.</p>
+    </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        const footer = document.querySelector("footer");
+        if (window.scrollY > 0) {
+          header.classList.add("opaque");
+          footer.classList.add("opaque");
+        } else {
+          header.classList.remove("opaque");
+          footer.classList.remove("opaque");
+        }
+      });
+    </script>
+  </body>
+</html>
